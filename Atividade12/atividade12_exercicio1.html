@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Calculadora de Área de Retângulo</h1>
+
+    <script>
+        function Retangulo(base, altura) {
+            this.base = base;
+            this.altura = altura;
+            this.calcularArea = function() {
+                return this.base * this.altura;
+            }
+        }
+
+        var meuRetangulo = new Retangulo(5, 7);
+
+        var area = meuRetangulo.calcularArea();
+
+        document.write("<p>A área do retângulo é: " + area + "</p>");
+    </script>
+</body>
+</html>

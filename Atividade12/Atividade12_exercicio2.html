@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <script>
+        class Conta {
+            constructor(NomeCorrentista, Banco, NumeroDaConta, Saldo) {
+                this._NomeCorrentista = NomeCorrentista;
+                this._Banco = Banco;
+                this._NumeroDaConta = NumeroDaConta;
+                this._Saldo = Saldo;
+            }
+
+            get NomeCorrentista() {
+                return this._NomeCorrentista;
+            }
+
+            set NomeCorrentista(nome) {
+                this._NomeCorrentista = nome;
+            }
+
+            get Banco() {
+                return this._Banco;
+            }
+
+            set Banco(banco) {
+                this._Banco = banco;
+            }
+
+            get NumeroDaConta() {
+                return this._NumeroDaConta;
+            }
+
+            set NumeroDaConta(numero) {
+                this._NumeroDaConta = numero;
+            }
+
+            get Saldo() {
+                return this._Saldo;
+            }
+
+            set Saldo(saldo) {
+                this._Saldo = saldo;
+            }
+        }
+
+        class Corrente extends Conta {
+            constructor(NomeCorrentista, Banco, NumeroDaConta, Saldo, SaldoEspecial) {
+                super(NomeCorrentista, Banco, NumeroDaConta, Saldo);
+                this._SaldoEspecial = SaldoEspecial;
+            }
+
+            get SaldoEspecial() {
+                return this._SaldoEspecial;
+            }
+
+            set SaldoEspecial(saldoEspecial) {
+                this._SaldoEspecial = saldoEspecial;
+            }
+        }
+
+        class Poupanca extends Conta {
+            constructor(NomeCorrentista, Banco, NumeroDaConta, Saldo, Juros, DataVencimento) {
+                super(NomeCorrentista, Banco, NumeroDaConta, Saldo);
+                this._Juros = Juros;
+                this._DataVencimento = DataVencimento;
+            }
+
+            get Juros() {
+                return this._Juros;
+            }
+
+            set Juros(juros) {
+                this._Juros = juros;
+            }
+
+            get DataVencimento() {
+                return this._DataVencimento;
+            }
+
+            set DataVencimento(dataVencimento) {
+                this._DataVencimento = dataVencimento;
+            }
+        }
+    
+
+        var corrente = new Corrente("João", "Banco A", "12345", 1000, 200);
+        
+        var poupanca = new Poupanca("Maria", "Banco B", "54321", 5000, 0.03, "2023-12-31");
+
+        console.log("Dados da Conta Corrente:");
+        console.log("Nome do Correntista: " + corrente.NomeCorrentista);
+        console.log("Banco: " + corrente.Banco);
+        console.log("Número da Conta: " + corrente.NumeroDaConta);
+        console.log("Saldo: " + corrente.Saldo);
+        console.log("Saldo Especial: " + corrente.SaldoEspecial);
+
+        console.log("\nDados da Conta Poupança:");
+        console.log("Nome do Correntista: " + poupanca.NomeCorrentista);
+        console.log("Banco: " + poupanca.Banco);
+        console.log("Número da Conta: " + poupanca.NumeroDaConta);
+        console.log("Saldo: " + poupanca.Saldo);
+        console.log("Taxa de Juros: " + poupanca.Juros);
+        console.log("Data de Vencimento: " + poupanca.DataVencimento);
+    </script>
+</body>
+</html>
+
