@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Troca de Imagem</title>
+</head>
+<body>
+    <div id="imagemContainer">
+        <img id="imagem" src="https://i.pinimg.com/originals/41/65/68/41656853e722e8e1418f288f86be20e0.jpg" alt="janela fechada..." title="janela fechada...">
+    </div>
+    
+    <script>
+        var imagem = document.getElementById("imagem");
+        var container = document.getElementById("imagemContainer");
+        var mouseSobre = false;
+
+        imagem.addEventListener("mouseover", function() {
+            if (!mouseSobre) {
+                imagem.src = "https://product-hub-prd.madeiramadeira.com.br/658237/images/63f54050-0acd-4ad2-9b93-8ac92c900a6dfolhas100x165823712600x600.jpg";
+                imagem.title = "abra a janela";
+                mouseSobre = true;
+            } else {
+                imagem.src = "https://i.pinimg.com/originals/41/65/68/41656853e722e8e1418f288f86be20e0.jpg";
+                imagem.title = "feche a janela";
+                mouseSobre = false;
+            }
+        });
+
+        imagem.addEventListener("click", function() {
+            window.location.href = "https://th.bing.com/th/id/OIP.xmleurKIEkrUHxiRqmvXcAHaHa?pid=ImgDet&rs=1";
+        });
+    </script>
+</body>
+</html>
