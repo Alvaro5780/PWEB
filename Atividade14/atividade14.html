@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #output {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+  <input type="text" id="inputText">
+  <div>
+    <input type="checkbox" id="uppercaseCheckbox"> Maiúsculas
+    <input type="checkbox" id="lowercaseCheckbox"> Minúsculas
+  </div>
+  <div id="output"></div>
+
+  <script>
+    const inputText = document.getElementById("inputText");
+    const uppercaseCheckbox = document.getElementById("uppercaseCheckbox");
+    const lowercaseCheckbox = document.getElementById("lowercaseCheckbox");
+    const output = document.getElementById("output");
+
+    uppercaseCheckbox.addEventListener("change", updateText);
+    lowercaseCheckbox.addEventListener("change", updateText);
+    inputText.addEventListener("input", updateText);
+
+    function updateText() {
+      const inputValue = inputText.value;
+      let transformedValue = inputValue;
+
+      if (uppercaseCheckbox.checked && lowercaseCheckbox.checked) {
+        output.textContent = "Escolha apenas uma opção: Maiúsculas ou Minúsculas";
+      } else if (uppercaseCheckbox.checked) {
+        transformedValue = inputValue.toUpperCase();
+        output.textContent = transformedValue;
+      } else if (lowercaseCheckbox.checked) {
+        transformedValue = inputValue.toLowerCase();
+        output.textContent = transformedValue;
+      } else {
+        output.textContent = inputValue;
+      }
+    }
+  </script>
+</body>
+</html>
