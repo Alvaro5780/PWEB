@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body ::before {
+    content: "";
+    background: url('download.avif') no-repeat center fixed;
+    position: fixed;
+    background-size: cover;
+    z-index: -1;
+}    
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+#menuToggle {
+    display: none;
+}
+
+
+.section {
+    margin: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Calibri', sans-serif;
+    font-size: 36px;
+    color: #333;
+}
+
+h2{
+    color: #fff;
+}
+
+h3 {
+    font-size: 24px;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    padding: 0px;
+}
+
+ol {
+    list-style: none;
+    text-align: center;
+    padding-bottom: 0px;
+    padding-right: 40px;
+}
+
+#sobre {
+    background-color: #d8d8d8;
+    border-left: solid #416283 7px;
+    border-bottom: solid #416283 6px;
+    border-right: solid #416283 2px;
+    border-top: solid #416283 2px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #555;    
+    width: 600px; 
+    height: 200px;
+    padding: 5px;
+    margin-left: 270px;
+    margin-top: -28px;
+}
+
+#projetos {
+    position: absolute;
+    border: 1px solid #ccc;
+    left: 0;
+    top: 280px;
+    border-radius: 10px;
+    border-left: solid #416283 7px;
+    border-bottom: solid #416283 6px;
+    border-right: solid #416283 2px;
+    border-top: solid #416283 2px;
+    height: 650px;
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #d8d8d8;
+}
+
+.projeto {
+    color: #fff;
+    position: relative;
+    right: 25px;
+    width: 210px;
+    border: solid 1px #232323;
+    background-color: #416283;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.projeto:hover {
+    background-color: rgb(0, 70, 107); /* Cor de destaque ao passar o mouse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra ao passar o mouse */
+}
+
+#fotos {
+    margin-top: 0;
+    position: absolute;
+    top: 20px;
+    border-radius: 10px;
+    border-left: solid #416283 7px;
+    border-bottom: solid #416283 6px;
+    border-right: solid #416283 2px;
+    border-top: solid #416283 2px;
+    right: 0px;
+    width: 200px;
+    height: 190px;
+    background-color: #d8d8d8;
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px; /* Margem externa */
+}
+
+#fotos h1 {
+    margin-top: 0px;
+}
+
+#foto {
+    position: absolute;
+    top: 60px;
+    right: 35px;
+    border: solid #416283 5px;
+    padding: 50px; /* Espaçamento interno */
+    margin: 30px; /* Margem externa */
+    border-radius: 10px;
+    background-image: url('Foto portfolio.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#habilidades {
+    position: absolute;
+    left: 0; /* Posiciona à esquerda */
+    bottom: 590px;
+    top: 20px; /* Mesma altura da primeira seção */
+    right: 970px;
+    border-left: solid #416283 7px;
+    border-bottom: solid #416283 6px;
+    border-right: solid #416283 2px;
+    border-top: solid #416283 2px;
+    background-color: #d8d8d8;
+    width: 240px;
+    height: 230px;
+    padding: 0px; /* Espaçamento interno igual ao da primeira seção */
+    margin: 20px; /* Mesma margem da primeira seção */
+    border-radius: 10px; /* Mesmo raio da borda da primeira seção */
+}
+
+#lista_habilidades {
+    color: #fff;
+    position: relative;
+    right: 5px;
+    height: 130px;
+    width: 210px;
+    bottom: 20px;
+    border: solid 1px #232323;
+    background-color: #416283;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#Formações {
+    position: absolute;
+    top: 280px;
+    border-radius: 10px;
+    border-left: solid #416283 7px;
+    border-bottom: solid #416283 6px;
+    border-right: solid #416283 2px;
+    border-top: solid #416283 2px;
+    right: 0;
+    height: 650px;
+    width: 200px; /*largura*/
+    background-color: #d8d8d8;
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px; /* Margem externa */
+}
+
+.formação {
+    color: #fff;
+    position: relative;
+    right: 25px;
+    width: 210px;
+    border: solid 1px #232323;
+    background-color: #416283;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#detalhes {
+    background-color: #d8d8d8;
+    border-left: solid #416283 7px;
+    border-bottom: solid #416283 6px;
+    border-right: solid #416283 2px;
+    border-top: solid #416283 2px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #555;    
+    width: 600px;
+    height: 320px;
+    padding: 5px;
+    margin-left: 320px;
+    margin-top: -1px;
+}
+
+#conteudo-detalhes {
+    color: #fff;
+    border: solid 1px #232323;
+    background-color: #416283;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#contato {
+    background-color: #d8d8d8;
+    border-left: solid #416283 7px;
+    border-bottom: solid #416283 6px;
+    border-right: solid #416283 2px;
+    border-top: solid #416283 2px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #555;    
+    width: 600px;
+
+    padding: 5px;
+    margin-left: 320px;
+    margin-top: -1px;
+}
+
+footer {
+    position: relative;
+    background-color: #416283;
+    text-align: center;
+    padding: 5px 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: #1E90FF;
+}
+
